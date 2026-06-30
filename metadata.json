@@ -1,0 +1,6 @@
+{
+  "name": "Nexus Planner",
+  "description": "A premium AI-powered productivity web application with smart planning, mindful focus, and AI guidance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

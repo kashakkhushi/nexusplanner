@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile data stored in Firestore",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Unique user ID matching Firebase Auth UID"
+        },
+        "fullName": {
+          "type": "string",
+          "description": "User's full name"
+        },
+        "email": {
+          "type": "string",
+          "description": "User's email address"
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "URL to the user's profile photo"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp when account was created"
+        },
+        "lastLogin": {
+          "type": "string",
+          "description": "ISO timestamp of last login"
+        },
+        "otpCode": {
+          "type": "string",
+          "description": "Verification code (6-digit OTP)"
+        },
+        "otpExpiresAt": {
+          "type": "string",
+          "description": "ISO timestamp of code expiry"
+        },
+        "emailVerified": {
+          "type": "boolean",
+          "description": "Whether the user email is verified"
+        },
+        "provider": {
+          "type": "string",
+          "description": "Authentication provider (e.g. password, google.com)"
+        }
+      },
+      "required": ["uid", "fullName", "email", "createdAt", "lastLogin", "emailVerified"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "UserProfile",
+      "description": "Collection of user profile documents indexed by user ID"
+    }
+  }
+}
